@@ -68,11 +68,6 @@ persistence:
   storageClass: 'local-path'
   # existingClaim: ''
 
-devtoolsIngress:
-  enabled: false
-  hosts:
-  - host: devtools.dinsro.localhost
-
 ingress:
   enabled: true
   annotations: {}
