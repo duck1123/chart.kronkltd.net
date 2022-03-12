@@ -3,12 +3,12 @@ entries:
   dinsro:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-12T20:21:47.518367368Z"
+    created: "2022-03-12T23:44:49.625285856Z"
     description: A Helm chart for Kubernetes
-    digest: 7aab9350ebb12cc961966bc565d37c1e6201be42d59df83646ebebf980c3d17b
+    digest: d044a7e33957bc53df74660030e97b47400949e194bbeba2fd7174641401d6db
     name: dinsro
     type: application
     urls:
     - https://duck1123.github.io/helm/dinsro-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-12T20:21:47.516731446Z"
+generated: "2022-03-12T23:44:49.624082465Z"
