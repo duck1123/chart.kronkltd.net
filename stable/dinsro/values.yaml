@@ -41,6 +41,7 @@ service:
   port: 3000
 
 devtools:
+  enabled: false
   service:
     type: ClusterIP
     port: 9630
@@ -51,7 +52,11 @@ devtools:
       paths:
       - path: /
 
+nrepl:
+  enabled: false
+
 workspaces:
+  enabled: false
   service:
     type: ClusterIP
     port: 3693
@@ -62,12 +67,61 @@ workspaces:
       paths:
       - path: /
 
+notebook:
+  enabled: false
+  service:
+    type: ClusterIP
+    port: 3693
+  ingress:
+    enabled: true
+    hosts:
+    - host: notebook.dinsro.localhost
+      paths:
+      - path: /
+
+portal:
+  enabled: false
+  service:
+    type: ClusterIP
+    port: 5678
+  ingress:
+    enabled: true
+    hosts:
+    - host: portal.dinsro.localhost
+      paths:
+      - path: /
+
 persistence:
   enabled: true
   size: 1G
   storageClass: 'local-path'
-  seed: false
   # existingClaim: ''
+  seed: false
+  certs:
+    enabled: true
+    storageClass: 'local-path'
+    size: 1G
+
+database:
+  enabled: true
+  user: postges
+  password: mysecretpassword
+  service:
+    port: 5432
+    # nodePort: 1000
+  image:
+    repository: postgres
+    version: 12.1
+  persistence:
+    # existingClaim: -
+    size: 1G
+    storageClass: local-path
+  seed: false
+
+devtoolsIngress:
+  enabled: false
+  hosts:
+  - host: devtools.dinsro.localhost
 
 ingress:
   enabled: true
@@ -107,3 +161,32 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# dinsroConfig: |-
+#     {:dinsro.component.notebooks/config {:enabled true}
+#      :roterski.fulcro.rad.database-adapters.xtdb/databases
+#       {:main
+#         {:xtdb.jdbc/connection-pool
+#          {:dialect #:xtdb{:module "xtdb.jdbc.psql/->dialect"}
+#           :db-spec {:dbname   "dinsro"
+#                     :host     "db"
+#                     :user     "postgres"
+#                     :password "mysecretpassword"}}
+#          :xtdb/tx-log         {:xtdb/module     "xtdb.jdbc/->tx-log"
+#                                :connection-pool :xtdb.jdbc/connection-pool}
+#          :xtdb/document-store {:xtdb/module     "xtdb.jdbc/->document-store"
+#                                :connection-pool :xtdb.jdbc/connection-pool}}}
+#      :com.fulcrologic.rad.pathom/config
+#        {:trace?         false
+#         :log-requests?  false
+#         :log-responses? false}
+#      :dinsro.components.config/secret-path "/mnt/certs/secret"
+#      :taoensso.timbre/logging-config
+#      {:min-level
+#      [[#{"_rad.resolvers"
+#          "roterski.fulcro.rad.database-adapters.xtdb.generate-resolvers"} :fatal]
+#       [#{"dinsro.*"} :debug]
+#       [#{"*"} :info]]}
+#       }
+
+dinsroConfig: "-"

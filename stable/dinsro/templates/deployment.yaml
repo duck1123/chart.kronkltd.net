@@ -38,6 +38,12 @@ spec:
         - name: DEVTOOLS_URL
           value: "http://{{ .host }}"
         {{- end }}
+        {{- if .Values.devtools.enabled }}
+        - name: WATCH_SOURCES
+          value: "true"
+        {{- end }}
+        - name: DINSRO_USE_NOTEBOOK
+          value: {{ .Values.notebook.enabled | quote }}
         ports:
         - name: http
           containerPort: 3000
@@ -45,6 +51,7 @@ spec:
         - name: nrepl
           containerPort: 3333
           protocol: TCP
+        {{- if .Values.devtools.enabled }}
         - name: devtools
           containerPort: 9630
           protocol: TCP
@@ -54,6 +61,12 @@ spec:
         - name: workspaces
           containerPort: 3693
           protocol: TCP
+        {{- end }}
+        {{- if .Values.notebook.enabled }}
+        - name: notebook
+          containerPort: 7777
+          protocol: TCP
+        {{- end }}
         livenessProbe:
           httpGet:
             path: /
@@ -67,9 +80,11 @@ spec:
         resources:
           {{- toYaml .Values.resources | nindent 12 }}
         volumeMounts:
+        - name: certs
+          mountPath: /mnt/certs
         - name: config
-          mountPath: /
-          subPath: config.edn
+          mountPath: /etc/dinsro
+          # subPath: config.edn
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -83,6 +98,9 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       volumes:
+      - name: certs
+        persistentVolumeClaim:
+          claimName: certs
       - name: config
         configMap:
           name: config
