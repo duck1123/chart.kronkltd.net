@@ -66,6 +66,7 @@ persistence:
   enabled: true
   size: 1G
   storageClass: 'local-path'
+  seed: false
   # existingClaim: ''
 
 ingress:
