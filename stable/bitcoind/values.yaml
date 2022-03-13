@@ -1,0 +1,48 @@
+# Default values for bitcoind.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+terminationGracePeriodSeconds: 30
+image:
+  repository: ruimarinho/bitcoin-core
+  tag: 22
+  pullPolicy: IfNotPresent
+
+service:
+  rpcPort: 8332
+  p2pPort: 8333
+  testnetPort: 18332
+  testnetP2pPort: 18333
+  regtestPort: 18443
+  regtestP2pPort: 18444
+  zmqpubRawBlockPort: 28332
+  zmqpubRawTxPort: 28333
+  zmqpubHashBlockPort: 28334
+
+persistence:
+  enabled: true
+  ## database data Persistent Volume Storage Class
+  ## If defined, storageClassName: <storageClass>
+  ## If set to "-", storageClassName: "", which disables dynamic provisioning
+  ## If undefined (the default) or set to null, no storageClassName spec is
+  ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+  ##   GKE, AWS & OpenStack)
+  ##
+  # storageClass: "-"
+  accessMode: ReadWriteOnce
+  size: 300Gi
+
+## Configure resource requests and limits
+## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+##
+resources: {}
+#  requests:
+#    memory: 512Mi
+#    cpu: 300m
+
+# Custom bitcoind configuration file used to override default bitcoind settings
+# rpcauth values: rpcuser / rpcpassword
+configurationFile:
+  bitcoin.conf: |-
+    server=1
+    printtoconsole=1
+    rpcauth=rpcuser:3de4eb23a68a288cfbc857d3cf52b5c4$0b28c21a8d32d047b4da6b4b5f290951319bad3cb0985ef863c8fa4614f3c109

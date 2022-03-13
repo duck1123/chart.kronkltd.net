@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: cert-downloader
+spec:
+  template:
+    spec:
+      containers:
+      - name: rtl
+        image: "{{ .Values.certDownloader.image.repository }}:{{ .Values.certDownloader.image.tag }}"
+        imagePullPolicy: {{ .Values.certDownloader.image.pullPolicy }}
+        volumeMounts:
+        - name: certs
+          mountPath: /mnt/data
+      restartPolicy: Never
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      volumes:
+      - name: certs
+        persistentVolumeClaim:
+          claimName: certs
