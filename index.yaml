@@ -1,14 +1,118 @@
 apiVersion: v1
 entries:
+  bitcoind:
+  - apiVersion: v1
+    appVersion: 0.17.1
+    created: "2022-03-13T13:40:25.252658213Z"
+    description: Bitcoin is an innovative payment network and a new kind of money.
+    digest: e5e6ea6a9a9deb6f777feb1873e57cc3aae2a12d7a47f48d8de4a1cad29f5a1f
+    home: https://bitcoin.org/
+    icon: https://bitcoin.org/img/icons/logotop.png
+    keywords:
+    - bitcoind
+    - cryptocurrency
+    - blockchain
+    maintainers:
+    - email: daniel@arilot.com
+      name: daniel-yavorovich
+    - email: shiyanval@gmail.com
+      name: govale
+    name: bitcoind
+    sources:
+    - https://github.com/kubernetes/charts
+    - https://github.com/kuberstack/bitcoind
+    - https://github.com/kylemanna/docker-bitcoind
+    urls:
+    - https://duck1123.github.io/chart.kronkltd.net/bitcoind-0.2.3.tgz
+    version: 0.2.3
   dinsro:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-12T23:44:49.625285856Z"
+    created: "2022-03-13T13:40:25.25349822Z"
     description: A Helm chart for Kubernetes
-    digest: d044a7e33957bc53df74660030e97b47400949e194bbeba2fd7174641401d6db
+    digest: 914db02f4db233a33af295cd0fa109f3d8eb3ffe711f8e9be831d34ac2219cee
     name: dinsro
     type: application
     urls:
-    - https://duck1123.github.io/helm/dinsro-0.1.0.tgz
+    - https://duck1123.github.io/chart.kronkltd.net/dinsro-0.1.0.tgz
     version: 0.1.0
-generated: "2022-03-12T23:44:49.624082465Z"
+  lnd:
+  - apiVersion: v1
+    appVersion: 0.13.3
+    created: "2022-03-13T13:40:25.254007925Z"
+    description: A golang implementation of a Lightning Network node
+    digest: 5c883c117cad9630e00b99bf03df308c5912b26a57627d4ca3febcfcd483fec2
+    home: https://github.com/lightningnetwork/lnd
+    keywords:
+    - lnd
+    - cryptocurrency
+    - blockchain
+    - bitcoin
+    maintainers:
+    - email: tdickman@gmail.com
+      name: tdickman
+    name: lnd
+    sources:
+    - https://github.com/kubernetes/charts
+    urls:
+    - https://duck1123.github.io/chart.kronkltd.net/lnd-0.3.8.tgz
+    version: 0.3.8
+  mempool:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-03-13T13:40:25.254366028Z"
+    description: Mempool.space
+    digest: 36af45f333617517984aa07fb55977cb867156559eeb2c045db756ce76271c2a
+    name: mempool
+    type: application
+    urls:
+    - https://duck1123.github.io/chart.kronkltd.net/mempool-0.1.0.tgz
+    version: 0.1.0
+  nbxplorer:
+  - apiVersion: v2
+    appVersion: 2.1.52
+    created: "2022-03-13T13:40:25.258341065Z"
+    dependencies:
+    - name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.16.0
+    description: A Helm chart for Kubernetes
+    digest: 23002c2a6767bd3eb1d4f123ac7dd7b737d499d54baa5f878e27e568387d19be
+    name: nbxplorer
+    type: application
+    urls:
+    - https://duck1123.github.io/chart.kronkltd.net/nbxplorer-0.1.4.tgz
+    version: 0.1.4
+  rtl:
+  - apiVersion: v2
+    appVersion: 0.11.0
+    created: "2022-03-13T13:40:25.259029272Z"
+    description: Ride The Lightning
+    digest: f6aff7f38f9df33392665bdf64ca2a3b1c7b66942c02fd918d9ecb1b45bc7d40
+    name: rtl
+    type: application
+    urls:
+    - https://duck1123.github.io/chart.kronkltd.net/rtl-0.1.0.tgz
+    version: 0.1.0
+  specter-desktop:
+  - apiVersion: v2
+    appVersion: v0.10.4
+    created: "2022-03-13T13:40:25.259757179Z"
+    description: A Helm chart for Kubernetes
+    digest: 54cf13358abfd1338a03d6bb3c81ebbd8f047c143941b877f6029970fb0a04b9
+    name: specter-desktop
+    type: application
+    urls:
+    - https://duck1123.github.io/chart.kronkltd.net/specter-desktop-0.1.0.tgz
+    version: 0.1.0
+  sqlpad:
+  - apiVersion: v2
+    appVersion: "6.7"
+    created: "2022-03-13T13:40:25.260304584Z"
+    digest: c84921f2b802d6bdf6a4b3fd02c763d00d89048d3e135c79a841f1840bcdd915
+    name: sqlpad
+    type: application
+    urls:
+    - https://duck1123.github.io/chart.kronkltd.net/sqlpad-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-03-13T13:40:25.251984606Z"
