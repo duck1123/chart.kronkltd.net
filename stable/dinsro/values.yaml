@@ -40,8 +40,40 @@ service:
   type: ClusterIP
   port: 3000
 
+devcards:
+  enabled: true
+  devtools:
+    enabled: true
+    service:
+      type: ClusterIP
+      port: 9630
+    ingress:
+      enabled: true
+      hosts:
+      - host: devtools.devcards.dinsro.localhost
+        paths:
+        - path: /
+      # tls: []
+        # hosts: []
+        # secretName: devcards-devtools-tls
+  service:
+    type: ClusterIP
+    port: 7778
+  ingress:
+    enabled: true
+    hosts:
+    - host: cards.dinsro.localhost
+      paths:
+      - path: /
+    tls:
+      enabled: false
+      entries:
+        hosts:
+        - cards.dinsro.localhost
+        secretName: cards-tls
+
 devtools:
-  enabled: false
+  enabled: true
   service:
     type: ClusterIP
     port: 9630
@@ -52,8 +84,25 @@ devtools:
       paths:
       - path: /
 
-nrepl:
+docs:
   enabled: false
+  service:
+    type: ClusterIP
+    port: 3000
+  ingress:
+    enabled: true
+    hosts:
+    - host: docs.dinsro.localhost
+      paths:
+      - path: /
+    tls:
+      enabled: false
+      entries:
+      - hosts: []
+        secretName: docs-tls
+
+nrepl:
+  enabled: true
 
 workspaces:
   enabled: false
@@ -67,20 +116,20 @@ workspaces:
       paths:
       - path: /
 
-notebook:
-  enabled: false
+notebooks:
+  enabled: true
   service:
     type: ClusterIP
     port: 3693
   ingress:
     enabled: true
     hosts:
-    - host: notebook.dinsro.localhost
+    - host: notebooks.dinsro.localhost
       paths:
       - path: /
 
 portal:
-  enabled: false
+  enabled: true
   service:
     type: ClusterIP
     port: 5678
