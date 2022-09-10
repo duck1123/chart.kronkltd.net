@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: {{ template "lnd.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   annotations:
     "helm.sh/resource-policy": keep
   labels:

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "lnd.fullname" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     app: {{ template "lnd.name" . }}
     chart: {{ template "lnd.chart" . }}
@@ -60,15 +61,6 @@ spec:
                 # Make sure we safely quit lnd so we don't corrupt
                 # anything
                 command: ["/bin/lncli", "-n", "{{ .Values.network }}", "stop"]
-        - name: "fileserver"
-          image: {{ .Values.fileserver.image.repository }}:{{ .Values.fileserver.image.tag }}
-          volumeMounts:
-          - name: data
-            mountPath: /mnt/lnd-data
-            subPath: .lnd
-          ports:
-          - name: files
-            containerPort: 3000
         {{- if .Values.autoUnlock }}
         - name: autounlock
           image: appropriate/curl

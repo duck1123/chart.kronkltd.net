@@ -4,13 +4,8 @@
 
 image:
   repository: thesisrobot/lnd
-  tag: v0.13.3-beta
+  tag: v0.14.1-beta
   pullPolicy: IfNotPresent
-
-fileserver:
-  image:
-    repository: duck1123/lnd-fileserver
-    tag: latest
 
 # Ports that are exposed to other pods in your cluster
 internalServices:
@@ -79,7 +74,3 @@ pool:
   image:
     repository: thesisrobot/pool
     tag: v0.3.3-alpha
-
-ingress:
-  host: lnd.localhost
-  port: 80
