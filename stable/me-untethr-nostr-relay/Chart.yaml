@@ -1,0 +1,7 @@
+apiVersion: v2
+name: me-untethr-nostr-relay
+description: A nostr relay, written in Clojure.
+
+type: application
+version: "0.1.0"
+appVersion: "0.1.0"

@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "untethr.fullname" . }}-conf
+  namespace: "{{ .Release.Namespace }}"
+data:
+  relay.yaml: |-
+    hostname: {{ .Values.relay.name }}
+    http:
+      port: {{ .Values.service.port }}
+    sqlite:
+      file: "data/n.db"
+  nip05.json: |-
+    { "{{ .Values.relay.username }}": "{{ .Values.relay.pubkey }}" }
+  nip11.json: |-
+    {
+      "name": "{{ .Values.relay.name }}",
+      "description": "{{ .Values.relay.description }}",
+      "pubkey": "{{ .Values.relay.pubkey }}",
+      "contact": "{{ .Values.relay.contact }}",
+      "supported_nips": [1, 2, 4, 11, 12, 15, 20],
+      "software": "{{ .Values.relay.software }}",
+      "version": "0.1.0"
+    }
