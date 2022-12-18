@@ -11,7 +11,7 @@ data:
     sqlite:
       file: "data/n.db"
   nip05.json: |-
-    { "{{ .Values.relay.username }}": "{{ .Values.relay.pubkey }}" }
+    { "names": { "{{ .Values.relay.username }}": "{{ .Values.relay.pubkey }}" } }
   nip11.json: |-
     {
       "name": "{{ .Values.relay.name }}",
