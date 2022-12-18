@@ -1,0 +1,6 @@
+apiVersion: v2
+name: astral
+description: astral is a web client for interacting with Nostr, a protocol that attempts to make decentralized social media a reality. astral began as a fork of Branle.
+type: application
+version: "0.1.0"
+appVersion: "0.0.9"
