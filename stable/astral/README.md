@@ -1,0 +1,32 @@
+# astral
+
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.0.9](https://img.shields.io/badge/AppVersion-0.0.9-informational?style=flat-square)
+
+astral is a web client for interacting with Nostr, a protocol that attempts to make decentralized social media a reality. astral began as a fork of Branle.
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| autoscaling.enabled | bool | `false` |  |
+| autoscaling.maxReplicas | int | `100` |  |
+| autoscaling.minReplicas | int | `1` |  |
+| autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| image.pullPolicy | string | `"Always"` |  |
+| image.repository | string | `"duck1123/astral"` |  |
+| image.tag | string | `"latest"` |  |
+| ingress.annotations | object | `{}` |  |
+| ingress.enabled | bool | `true` |  |
+| ingress.hosts[0].host | string | `"astral.localhost"` |  |
+| ingress.hosts[0].paths[0].path | string | `"/"` |  |
+| persistence.enabled | bool | `true` |  |
+| persistence.size | string | `"1G"` |  |
+| persistence.storageClass | string | `"local-path"` |  |
+| podSecurityContext | object | `{}` |  |
+| securityContext | object | `{}` |  |
+| service.port | int | `8000` |  |
+| service.type | string | `"ClusterIP"` |  |
+| serviceAccount.annotations | object | `{}` | Annotations to add to the service account |
+| serviceAccount.create | bool | `true` | Specifies whether a service account should be created |
+| serviceAccount.name | string | `""` | The name of the service account to use. If not set and create is true, a name is generated using the fullname template |
+
