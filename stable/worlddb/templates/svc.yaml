@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "worlddb.fullname" . }}
+  labels:
+    {{- include "worlddb.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  - port: {{ .Values.service.port }}
+    targetPort: db
+    protocol: TCP
+    name: db
+  selector:
+    {{- include "worlddb.selectorLabels" . | nindent 4 }}
