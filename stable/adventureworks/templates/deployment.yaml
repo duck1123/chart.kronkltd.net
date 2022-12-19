@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "adventureworks.fullname" . }}
+  labels:
+{{- include "adventureworks.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+{{- include "adventureworks.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "adventureworks.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+      - name: adventureworks
+        image: chriseaton/adventureworks
+        imagePullPolicy: {{ .Values.imagePullPolicy | quote }}
+        env:
+        - name: SA_PASSWORD
+          value: "yourStrong(!)Password"
+        - name: ACCEPT_EULA
+          value: "Y"
+        ports:
+        - name: db
+          containerPort: 1433
