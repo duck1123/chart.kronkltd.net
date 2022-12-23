@@ -50,3 +50,11 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{- define "untethr.image" -}}
+{{- with .Values.image.registry -}}
+{{- . }}/
+{{- end -}}
+{{- .Values.image.repository }}:
+{{- .Values.image.tag | default .Chart.AppVersion -}}
+{{- end -}}

@@ -30,10 +30,10 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
       - name: {{ .Chart.Name }}
+        image: {{ include "untethr.image" . }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         securityContext:
           {{- toYaml .Values.securityContext | nindent 12 }}
-        image: "{{ .Values.image.repository }}"
-        imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - name: http
           containerPort: {{ .Values.service.port }}
@@ -52,10 +52,10 @@ spec:
           {{- toYaml .Values.resources | nindent 12 }}
         volumeMounts:
         - name: data
-          mountPath: /home/circleci/project/data
+          mountPath: {{ .Values.dataPath }}
           subPath: data
         - name: conf
-          mountPath: /home/circleci/project/conf
+          mountPath: {{ .Values.confPath }}
           readOnly: true
       {{- with .Values.nodeSelector }}
       nodeSelector:

@@ -1,6 +1,6 @@
 # me-untethr-nostr-relay
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.1.0](https://img.shields.io/badge/AppVersion-0.1.0-informational?style=flat-square)
+![Version: 0.1.3](https://img.shields.io/badge/Version-0.1.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.2.1](https://img.shields.io/badge/AppVersion-0.2.1-informational?style=flat-square)
 
 A nostr relay, written in Clojure.
 
@@ -12,9 +12,12 @@ A nostr relay, written in Clojure.
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
+| confPath | string | `"/app/conf"` |  |
+| dataPath | string | `"/app/data"` |  |
 | image.pullPolicy | string | `"Always"` |  |
+| image.registry | string | `"docker.io"` |  |
 | image.repository | string | `"duck1123/me.untethr.nostr-relay"` |  |
-| image.tag | string | `"latest"` |  |
+| image.tag | string | `"0.2.1"` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.enabled | bool | `true` |  |
 | ingress.hosts[0].host | string | `"relay.localhost"` |  |

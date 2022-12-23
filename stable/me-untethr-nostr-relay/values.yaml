@@ -5,10 +5,14 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
+dataPath: /app/data
+confPath: /app/conf
+
 image:
+  registry: docker.io
   repository: duck1123/me.untethr.nostr-relay
   pullPolicy: Always
-  tag: "0.2.1"
+  tag: 0.2.1
 
 ingress:
   enabled: true
@@ -21,8 +25,8 @@ ingress:
     - path: "/"
   # tls:
   # - hosts:
-  #   - dinsro.localhost
-  #   secretName: dinsro-tls
+  #   - relay.localhost
+  #   secretName: relay-tls
 
 persistence:
   enabled: true
