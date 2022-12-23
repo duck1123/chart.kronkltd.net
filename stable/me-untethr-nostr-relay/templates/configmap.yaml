@@ -18,7 +18,7 @@ data:
       "description": "{{ .Values.relay.description }}",
       "pubkey": "{{ .Values.relay.pubkey }}",
       "contact": "{{ .Values.relay.contact }}",
-      "supported_nips": [1, 2, 4, 11, 12, 15, 20],
+      "supported_nips": "${runtime.nips}",
       "software": "{{ .Values.relay.software }}",
-      "version": "0.1.0"
+      "version": "${runtime.version}"
     }

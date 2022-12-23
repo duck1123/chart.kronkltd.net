@@ -8,7 +8,7 @@ autoscaling:
 image:
   repository: duck1123/me.untethr.nostr-relay
   pullPolicy: Always
-  tag: "latest"
+  tag: "0.2.1"
 
 ingress:
   enabled: true
