@@ -8,8 +8,28 @@ data:
     hostname: {{ .Values.relay.name }}
     http:
       port: {{ .Values.service.port }}
+      host: 0.0.0.0
     sqlite:
       file: "data/n.db"
+
+    # This is optional. If not specified, the relay will store events of any numeric
+    # kind. Otherwise, the relay will (quietly) not store events not whitelisted
+    # here.
+    supported-kinds: ["0-5", "7", "40-49", "10000-19999", "20000-29999"]
+
+    # Optional. If not specified, then content of any length is accepted.
+    max-content-length: 1048576
+
+    # Optional. If not specified, events with any created_at are permitted.
+    # If specified, events with a created_at more than the current system's
+    # epoch millis *plus* this delta will be accepted.
+    max-created-at-delta: 2700
+
+    # Optional websockets config.
+    websockets:
+      max-outgoing-frames: 5000
+      disable-permessage-deflate: false
+      enable-batch-mode: false
   nip05.json: |-
     { "names": { "{{ .Values.relay.username }}": "{{ .Values.relay.pubkey }}" } }
   nip11.json: |-
