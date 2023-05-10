@@ -59,46 +59,6 @@ entries:
     urls:
     - https://duck1123.github.io/chart.kronkltd.net/dinsro-0.1.4.tgz
     version: 0.1.4
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-01-06T23:46:25.553357443Z"
-    description: A Helm chart for Kubernetes
-    digest: f46c8754019600452db4f3a6901d6c460342067940db1f73018f015fe47f3251
-    name: dinsro
-    type: application
-    urls:
-    - https://duck1123.github.io/chart.kronkltd.net/dinsro-0.1.3.tgz
-    version: 0.1.3
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-01-06T23:46:25.550886832Z"
-    description: A Helm chart for Kubernetes
-    digest: 4e2ebb916c9676be5f46e154b3a36b145da1b5b399635504d3cfb755455a1899
-    name: dinsro
-    type: application
-    urls:
-    - https://duck1123.github.io/chart.kronkltd.net/dinsro-0.1.2.tgz
-    version: 0.1.2
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-01-06T23:46:25.549241225Z"
-    description: A Helm chart for Kubernetes
-    digest: e2267c738a2cacee6fdc2e3cd1a3cf4e34bd24885adf942b01e68d3cf1bd51ef
-    name: dinsro
-    type: application
-    urls:
-    - https://duck1123.github.io/chart.kronkltd.net/dinsro-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-01-06T23:46:25.547063415Z"
-    description: A Helm chart for Kubernetes
-    digest: 914db02f4db233a33af295cd0fa109f3d8eb3ffe711f8e9be831d34ac2219cee
-    name: dinsro
-    type: application
-    urls:
-    - https://duck1123.github.io/chart.kronkltd.net/dinsro-0.1.0.tgz
-    version: 0.1.0
   fileserver:
   - apiVersion: v1
     appVersion: 0.0.1
