@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: duck1123/dinsro
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # -- Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
@@ -25,10 +25,12 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -54,22 +56,22 @@ devcards:
       # -- Enable ingress for devcards devtools
       enabled: true
       hosts:
-      - host: devtools.devcards.dinsro.localhost
-        paths:
-        - path: /
+        - host: devtools.devcards.dinsro.localtest.me
+          paths:
+            - path: /
       # tls:
       # - hosts:
-      #   - devtools.devcards.dinsro.localhost
+      #   - devtools.devcards.dinsro.localtest.me
       #   secretName: dinsro-devcards-devtools-tls
   ingress:
     enabled: true
     hosts:
-    - host: cards.dinsro.localhost
-      paths:
-      - path: /
+      - host: cards.dinsro.localtest.me
+        paths:
+          - path: /
     # tls:
     # - hosts:
-    #   - cards.dinsro.localhost
+    #   - cards.dinsro.localtest.me
     #   secretName: cards-tls
   service:
     type: ClusterIP
@@ -85,12 +87,13 @@ devtools:
     # -- Deploy Devtools ingress
     enabled: true
     hosts:
-    - host: devtools.dinsro.localhost
-      paths:
-      - path: /
+      - host: devtools.dinsro.localtest.me
+        service: devtools
+        paths:
+          - path: /
     # tls: []
     # - hosts:
-    #   - devtools.dinsro.localhost
+    #   - devtools.dinsro.localtest.me
     #   secretName: dinsro-devtools-tls
 
 docs:
@@ -102,16 +105,17 @@ docs:
   ingress:
     enabled: true
     hosts:
-    - host: docs.dinsro.localhost
-      paths:
-      - path: /
+      - host: docs.dinsro.localtest.me
+        paths:
+          - path: /
     # tls:
     # - hosts:
-    #   - docs.dinsro.localhost
+    #   - docs.dinsro.localtest.me
     #   secretName: docs-tls
 
 # -- base log level for dinsro
 logLevel: ":info"
+queryLogLevel: ":debug"
 
 nrepl:
   # -- enable nRepl connection
@@ -127,12 +131,12 @@ workspaces:
     # -- deploy workspaces ingress
     enabled: true
     hosts:
-    - host: workspaces.dinsro.localhost
-      paths:
-      - path: /
+      - host: workspaces.dinsro.localtest.me
+        paths:
+          - path: /
     # tls:
     # - hosts:
-    #   - workspaces.dinsro.localhost
+    #   - workspaces.dinsro.localtest.me
     #   secretName: dinsro-workspaces-tls
 
 notebooks:
@@ -145,9 +149,9 @@ notebooks:
     # -- deploy notebooks ingress
     enabled: true
     hosts:
-    - host: notebooks.dinsro.localhost
-      paths:
-      - path: /
+      - host: notebooks.dinsro.localtest.me
+        paths:
+          - path: /
     # tls:
     # - hosts:
     #   - notebooks.dinsro.localhost
@@ -156,19 +160,21 @@ notebooks:
 persistence:
   enabled: false
   size: 1G
-  storageClass: 'local-path'
+  storageClass: "local-path"
   # existingClaim: ''
   seed: false
   certs:
     enabled: true
-    storageClass: 'local-path'
+    storageClass: "local-path"
     size: 1G
 
 database:
   # -- Deploy postgres backend
   enabled: false
   # -- postgres username
-  user: postges
+  user: postgres
+  host: db
+  name: dinsro
   # -- postgres password
   password: mysecretpassword
   service:
@@ -185,19 +191,21 @@ database:
 
 ingress:
   enabled: true
-  annotations: {}
+  annotations:
+    {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-  - host: dinsro.localhost
-    paths:
-    - path: "/"
+    - host: dinsro.localtest.me
+      paths:
+        - path: "/"
   # tls:
   # - hosts:
-  #   - dinsro.localhost
+  #   - dinsro.localtest.me
   #   secretName: dinsro-tls
 
-resources: {}
+resources:
+  {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
