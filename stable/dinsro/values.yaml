@@ -153,24 +153,6 @@ notebooks:
     #   - notebooks.dinsro.localhost
     #   secretName: dinsro-notebooks-tls
 
-portal:
-  # -- Deploy Portal
-  enabled: false
-  service:
-    type: ClusterIP
-    port: 5678
-  ingress:
-    # -- Deploy Portal ingress
-    enabled: true
-    hosts:
-    - host: portal.dinsro.localhost
-      paths:
-      - path: /
-    # tls:
-    # - hosts:
-    #   - portal.dinsro.localhost
-    #   secretName: dinsro-portal-tls
-
 persistence:
   enabled: false
   size: 1G
