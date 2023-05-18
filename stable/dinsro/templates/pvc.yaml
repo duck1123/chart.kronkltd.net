@@ -2,7 +2,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: data
+  name: {{ template "dinsro.fullname" . }}-data
   labels:
     app: {{ template "dinsro.fullname" . }}-data
     type: local
