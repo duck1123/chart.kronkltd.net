@@ -3,8 +3,8 @@ entries:
   adventureworks:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-05-18T23:27:47.90558952Z"
-    digest: 0540a1833911fdb42df4cefe88ed20122c299aed2d8e422cd6f3dd89c3246a92
+    created: "2023-06-14T13:09:18.146584116Z"
+    digest: 531ec1f5b48cdc9a5ad0c0c1443a1bb0eb89e97ea6d131242ce5505090898b88
     name: adventureworks
     type: application
     urls:
@@ -13,11 +13,11 @@ entries:
   astral:
   - apiVersion: v2
     appVersion: 0.0.9
-    created: "2023-05-18T23:27:47.906100452Z"
+    created: "2023-06-14T13:09:18.146968917Z"
     description: astral is a web client for interacting with Nostr, a protocol that
       attempts to make decentralized social media a reality. astral began as a fork
       of Branle.
-    digest: 918a9b6411c90dfc91f85b9b4f3693bc880ecb3f88e9354c98d1543406723513
+    digest: 751669de94545766adf5ceb360cee5ec5810e971db3cad3fa386e2cd3fdd0f22
     name: astral
     type: application
     urls:
@@ -26,9 +26,9 @@ entries:
   bitcoind:
   - apiVersion: v1
     appVersion: 0.17.1
-    created: "2023-05-18T23:27:47.90671999Z"
+    created: "2023-06-14T13:09:18.14782812Z"
     description: Bitcoin is an innovative payment network and a new kind of money.
-    digest: 52074a3d6d21e1d802746ad423b73d85b7e7bf5b05571b5ce7dd1ed6555a07ae
+    digest: 7b5b618d56cfde43ff2f7653196d1b84f98a3cbd3790a65332a6a26d5540b869
     home: https://bitcoin.org/
     icon: https://bitcoin.org/img/icons/logotop.png
     keywords:
@@ -51,9 +51,9 @@ entries:
   dinsro:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-18T23:27:47.920328535Z"
+    created: "2023-06-14T13:09:18.159364258Z"
     description: A Helm chart for Kubernetes
-    digest: c70e93669c15d87e4064820438cd272ddd19f300ef81aa0793bc050af08f5522
+    digest: 9f3fd54b2ec67a7c865abe81dad479ff4bb05ab24ff29065a188704d0ad482e8
     name: dinsro
     type: application
     urls:
@@ -61,7 +61,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-18T23:27:47.917166238Z"
+    created: "2023-06-14T13:09:18.158332454Z"
     description: A Helm chart for Kubernetes
     digest: e0110a8c11d2c1f50213f0073ed029ce6675666803ce7aebd39046f15221a95a
     name: dinsro
@@ -71,7 +71,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-18T23:27:47.915787853Z"
+    created: "2023-06-14T13:09:18.157249151Z"
     description: A Helm chart for Kubernetes
     digest: 90997cfb261a342f8301b6de18ced433fe1dd1c5034e0f95a34519a004ad5cd7
     name: dinsro
@@ -81,7 +81,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-18T23:27:47.914427769Z"
+    created: "2023-06-14T13:09:18.155880646Z"
     description: A Helm chart for Kubernetes
     digest: 9c6cbc755d59a43da962b4d8d38c458e201466b2993d39f3b97a1e7de4c22d77
     name: dinsro
@@ -91,7 +91,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-18T23:27:47.912473447Z"
+    created: "2023-06-14T13:09:18.153152137Z"
     description: A Helm chart for Kubernetes
     digest: f46c8754019600452db4f3a6901d6c460342067940db1f73018f015fe47f3251
     name: dinsro
@@ -101,7 +101,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-18T23:27:47.910969454Z"
+    created: "2023-06-14T13:09:18.151856233Z"
     description: A Helm chart for Kubernetes
     digest: 4e2ebb916c9676be5f46e154b3a36b145da1b5b399635504d3cfb755455a1899
     name: dinsro
@@ -111,7 +111,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-18T23:27:47.909336353Z"
+    created: "2023-06-14T13:09:18.150452829Z"
     description: A Helm chart for Kubernetes
     digest: e2267c738a2cacee6fdc2e3cd1a3cf4e34bd24885adf942b01e68d3cf1bd51ef
     name: dinsro
@@ -121,7 +121,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-18T23:27:47.907815958Z"
+    created: "2023-06-14T13:09:18.149167124Z"
     description: A Helm chart for Kubernetes
     digest: 914db02f4db233a33af295cd0fa109f3d8eb3ffe711f8e9be831d34ac2219cee
     name: dinsro
@@ -132,16 +132,16 @@ entries:
   fileserver:
   - apiVersion: v1
     appVersion: 0.0.1
-    created: "2023-05-18T23:27:47.920951073Z"
+    created: "2023-06-14T13:09:18.159663258Z"
     description: http fileserver and cert watcher
-    digest: bcbeb66ac77e53558a628ba1c74bcbb1f79a31e3f91d9d46eef86c54c86519c6
+    digest: 8900ab88887c1dc42d182d05b16d1212e66231a07c4e29d1fced083e6371b192
     name: fileserver
     urls:
     - https://duck1123.github.io/chart.kronkltd.net/fileserver-0.3.10.tgz
     version: 0.3.10
   - apiVersion: v1
     appVersion: 0.0.1
-    created: "2023-05-18T23:27:47.921503007Z"
+    created: "2023-06-14T13:09:18.16010976Z"
     description: http fileserver and cert watcher
     digest: 39b963fc4c90a3a0f0395e75801446b763e4c1edc8e4649cb25d4faa8fc5489f
     name: fileserver
@@ -151,9 +151,9 @@ entries:
   lnbits:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-18T23:27:47.922231353Z"
+    created: "2023-06-14T13:09:18.160632262Z"
     description: A Helm chart for Kubernetes
-    digest: 3378abf611707280954f0cb67c6254ec613f7b42e54d56955e4ac24c1c6027aa
+    digest: 9f3bb21898d62fbdeba24145cbca2f08a816dca83549a3cae02b17a04b3f5c87
     name: lnbits
     type: application
     urls:
@@ -162,9 +162,9 @@ entries:
   lnd:
   - apiVersion: v1
     appVersion: 0.14.1
-    created: "2023-05-18T23:27:47.923600238Z"
+    created: "2023-06-14T13:09:18.161876566Z"
     description: A golang implementation of a Lightning Network node
-    digest: a27f8be84c09c2402c1692ab746508178f66bbd30fb982366d80b339384da407
+    digest: 55b465e94aae84bb650e519508e66788b615cc2ef5d7645852eb9b5efb1978d4
     home: https://github.com/lightningnetwork/lnd
     keywords:
     - lnd
@@ -182,7 +182,7 @@ entries:
     version: 0.3.9
   - apiVersion: v1
     appVersion: 0.13.3
-    created: "2023-05-18T23:27:47.922965398Z"
+    created: "2023-06-14T13:09:18.161175063Z"
     description: A golang implementation of a Lightning Network node
     digest: 3df7fbeb17e8018bc9a3db7107f7b74f08eb61ac0f4bfbd4bb5d9d849e578f08
     home: https://github.com/lightningnetwork/lnd
@@ -203,9 +203,9 @@ entries:
   me-untethr-nostr-relay:
   - apiVersion: v2
     appVersion: 0.2.1
-    created: "2023-05-18T23:27:47.926725431Z"
+    created: "2023-06-14T13:09:18.164977176Z"
     description: A nostr relay, written in Clojure.
-    digest: 9d01020822e9ac2b49db285c29a53db42af1bddd90617dded553eef4de162e72
+    digest: ff378327b4f899dff7b74d138e5f3033e0e127eb7933a789b9fbe3f047c501b7
     name: me-untethr-nostr-relay
     type: application
     urls:
@@ -213,7 +213,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.2.1
-    created: "2023-05-18T23:27:47.926127394Z"
+    created: "2023-06-14T13:09:18.164344574Z"
     description: A nostr relay, written in Clojure.
     digest: 04a340e163dea79140fc9f9fa4a59734daa5692b667f2d739c08f9e9b3384ea5
     name: me-untethr-nostr-relay
@@ -223,7 +223,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.2.1
-    created: "2023-05-18T23:27:47.925430051Z"
+    created: "2023-06-14T13:09:18.163759872Z"
     description: A nostr relay, written in Clojure.
     digest: def9e2ce285f04e8ec10933917c3181da360a2d83a7d36eeb5d48fdd8b8dfc35
     name: me-untethr-nostr-relay
@@ -233,7 +233,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-05-18T23:27:47.924779011Z"
+    created: "2023-06-14T13:09:18.163012469Z"
     description: A nostr relay, written in Clojure.
     digest: 018df9e422422bee6819c1aae41ef90c46076935555eff1cd9c96f023257676c
     name: me-untethr-nostr-relay
@@ -243,7 +243,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-05-18T23:27:47.924214176Z"
+    created: "2023-06-14T13:09:18.162439767Z"
     description: A nostr relay, written in Clojure.
     digest: 0ae0afdcb108a94419f0f1d12316a12c6bc7604e298c121c07795e05a20ec383
     name: me-untethr-nostr-relay
@@ -254,24 +254,35 @@ entries:
   mempool:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-05-18T23:27:47.927269365Z"
+    created: "2023-06-14T13:09:18.165502677Z"
     description: Mempool.space
-    digest: 4ba25452a2b67d5a441fadcb39e41a5d54a797540e5358c85c4f04f991f21c83
+    digest: 90e20305c7136b0af0f9d4a2843a38183892492fe014b96534efb9b5db3af635
     name: mempool
     type: application
     urls:
     - https://duck1123.github.io/chart.kronkltd.net/mempool-0.1.0.tgz
     version: 0.1.0
+  mindsdb:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T13:09:18.16617248Z"
+    description: A Helm chart for Kubernetes
+    digest: 2275d85b07c360e62cc2321148d9bf59b1556db9b489151b61aaae0a0ac19bdb
+    name: mindsdb
+    type: application
+    urls:
+    - https://duck1123.github.io/chart.kronkltd.net/mindsdb-0.1.0.tgz
+    version: 0.1.0
   nbxplorer:
   - apiVersion: v2
     appVersion: 2.1.52
-    created: "2023-05-18T23:27:47.941280434Z"
+    created: "2023-06-14T13:09:18.176014912Z"
     dependencies:
     - name: rabbitmq
       repository: https://charts.bitnami.com/bitnami
       version: 10.1.12
     description: A Helm chart for Kubernetes
-    digest: 218cfcb9bddf051f1ed682873395ec977026937d06375cf946fb91d9699f4004
+    digest: 446b99efee2bbb27b5515a8b4e7879f18b8fb7363539ce223befe281a414131a
     name: nbxplorer
     type: application
     urls:
@@ -279,7 +290,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 2.1.52
-    created: "2023-05-18T23:27:47.934954842Z"
+    created: "2023-06-14T13:09:18.171626397Z"
     dependencies:
     - name: rabbitmq
       repository: https://charts.bitnami.com/bitnami
@@ -294,9 +305,9 @@ entries:
   rtl:
   - apiVersion: v2
     appVersion: 0.11.0
-    created: "2023-05-18T23:27:47.941905773Z"
+    created: "2023-06-14T13:09:18.176609413Z"
     description: Ride The Lightning
-    digest: e278e1cacc5706ad8a8833c233e1c5d1d72669b63bbfcc13a4f382b030370477
+    digest: fede2bcedbcb9d14944b58cb942d2af2334b798fc36ac041f7830d5854e6ab9b
     name: rtl
     type: application
     urls:
@@ -305,9 +316,9 @@ entries:
   specter-desktop:
   - apiVersion: v2
     appVersion: v0.10.4
-    created: "2023-05-18T23:27:47.942576015Z"
+    created: "2023-06-14T13:09:18.177231815Z"
     description: A Helm chart for Kubernetes
-    digest: 69f45fd86ecdeffaedffbea264d125bef8b4b9f1394b25d03a1427efef07ca56
+    digest: 269bd6b277d390b07e6d0c2411cf0baaaf48614e58013d76d92a6fb0d1f8f145
     name: specter-desktop
     type: application
     urls:
@@ -316,8 +327,8 @@ entries:
   sqlpad:
   - apiVersion: v2
     appVersion: "6.7"
-    created: "2023-05-18T23:27:47.943097647Z"
-    digest: 2882149508d9c2760be970d1eb301254134f2cd575338bbb0bb15542b23cee49
+    created: "2023-06-14T13:09:18.177698717Z"
+    digest: 29c1abd4f7dc1de76e82325d35b8071fc0f4ad3e7f7b7e9bd1abd6b4fef1b7c2
     name: sqlpad
     type: application
     urls:
@@ -326,11 +337,11 @@ entries:
   world-db:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-05-18T23:27:47.943514173Z"
-    digest: 392a3b394bc1db772471cad5a772fb19586773e67f728ce73dd0c93f298e8161
+    created: "2023-06-14T13:09:18.178123018Z"
+    digest: 5e085f014df80ef697400811143953ed691547880ceb6a4a595628523d8fad23
     name: world-db
     type: application
     urls:
     - https://duck1123.github.io/chart.kronkltd.net/world-db-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-18T23:27:47.90478377Z"
+generated: "2023-06-14T13:09:18.145920914Z"
